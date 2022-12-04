@@ -86,10 +86,10 @@ const Navbar = ({ theme, setTheme, children }) => {
                 {/* <!-- Page content here --> */}
                 {children}
             </div>
-            {/* <div class="drawer-side">
+            <div class="drawer-side h-56">
                 <label for="my-drawer-3" class="drawer-overlay"></label>
-                <ul class="menu p-4 w-80 bg-base-100">
-                    
+                <ul class="menu p-4 w-52 h-50 bg-base-100">
+
                     <li>
                         <a>Home</a>
                     </li>
@@ -103,7 +103,7 @@ const Navbar = ({ theme, setTheme, children }) => {
                         <a>Contact Us</a>
                     </li>
                 </ul>
-            </div> */}
+            </div>
         </div>
     )
 }
