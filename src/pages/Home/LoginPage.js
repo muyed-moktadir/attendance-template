@@ -5,12 +5,12 @@ import login from "../../assets/images/login.png"
 const LoginPage = () => {
     return (
         <>
-            <div className="hero h-screen bg-accent mt-16">
-                <div className="hero-content flex-col lg:flex-row gap-64 ">
-                    <div className='h-screen mb-0'>
-                        <img src={login} class="h-full shrink-0 mb-0" alt="" />
+            <div className="hero h-auto bg-accent mt-7">
+                <div className="hero-content justify-between w-screen flex-col lg:flex-row">
+                    <div className=' h-screen shrink-0'>
+                        <img src={login} class="h-screen" alt="" />
                     </div>
-                    <div className="card flex-shrink-0 h-[60vh] w-full max-w-sm shadow-2xl bg-slate-100 mb-0">
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -24,11 +24,11 @@ const LoginPage = () => {
                                 </label>
                                 <input type="text" placeholder="password" className="input input-bordered" />
                                 <label className="label">
-                                    <Link href="#" className="label-text-alt link link-hover">Forgot password?</Link>
+                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary"><span className='capitalize'>Next Step</span></button>
+                                <button className="btn btn-primary capitalize">Next Step</button>
                             </div>
                         </div>
                     </div>
