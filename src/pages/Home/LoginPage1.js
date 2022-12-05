@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom'
 import login from "../../assets/images/login.png"
 import LoginPage2 from './LoginPage2'
 import LoginPage3 from './LoginPage3'
-const LoginPage = () => {
+import LoginPage4 from './LoginPage4'
+const LoginPage1 = () => {
     const [data, setData] = useState(true)
     return (
         <>
             <div className="hero h-auto bg-accent mt-10">
-                
+
                 <div className="hero-content justify-between w-screen flex-col lg:flex-row">
 
                     <div className='relative'>
@@ -18,10 +19,12 @@ const LoginPage = () => {
                     </div>
 
 
+                    {/* TODO: Render 2 Components */}
                     {
                         data ?
-                        
-                            <LoginPage2 data={data} setData={setData} /> : <LoginPage3 data={data} setData={setData}></LoginPage3>
+
+                            <LoginPage2 data={data} setData={setData} /> :
+                            <LoginPage3 data={data} setData={setData}></LoginPage3>
                     }
 
                 </div>
@@ -30,4 +33,4 @@ const LoginPage = () => {
     )
 }
 
-export default LoginPage
+export default LoginPage1
