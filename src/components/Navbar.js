@@ -4,12 +4,13 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = ({ theme, setTheme, children }) => {
     return (
+
         <div class="drawer drawer-end">
             <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content flex flex-col">
                 {/* //TODO:<!-- Navbar --> */}
                 <div class="w-full navbar bg-gradient-to-r bg-slate-300 fixed top-0 z-50  lg:px-20 drop-shadow-2xl">
-                    <div class="flex-1 px-2 mx-2 text-2xl">Heal-Scape</div>
+                    <div class="flex-1 px-2 mx-2 text-2xl"></div>
                     <div class="flex-none lg:hidden">
                         <label for="my-drawer-3" class="btn btn-square btn-ghost">
                             <svg
@@ -32,30 +33,9 @@ const Navbar = ({ theme, setTheme, children }) => {
                         <ul class="menu menu-horizontal gap-x-2">
                             {/* TODO:<!-- Navbar menu content here -->  */}
                             <li>
-                                <NavLink to="/login" className="rounded-lg">
+                                <NavLink to="/login" className="rounded-lg ">
                                     Login
                                 </NavLink>
-                            </li>
-
-                            <li class="dropdown dropdown-end dropdown-hover">
-                                <label
-                                    tabindex="0"
-                                    class="btn-outline rounded-lg btn btn-primary border-gray-200 capitalize"
-                                >
-                                    Book Now
-                                    {/* <span className="text-black font-normal"></span> */}
-                                </label>
-                                <ul
-                                    tabindex="0"
-                                    class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
-                                >
-                                    <li>
-                                        <a>Item 1</a>
-                                    </li>
-                                    <li>
-                                        <a>Item 2</a>
-                                    </li>
-                                </ul>
                             </li>
                             <label className="swap swap-rotate">
                                 <input
@@ -85,24 +65,6 @@ const Navbar = ({ theme, setTheme, children }) => {
                 </div>
                 {/* <!-- Page content here --> */}
                 {children}
-            </div>
-            <div class="drawer-side h-56">
-                <label for="my-drawer-3" class="drawer-overlay"></label>
-                <ul class="menu p-4 w-52 h-50 bg-base-100">
-
-                    <li>
-                        <a>Home</a>
-                    </li>
-                    <li>
-                        <a>Services</a>
-                    </li>
-                    <li>
-                        <a>About</a>
-                    </li>
-                    <li>
-                        <a>Contact Us</a>
-                    </li>
-                </ul>
             </div>
         </div>
     )

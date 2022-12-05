@@ -1,6 +1,9 @@
 import React from 'react'
+import {HiOutlineArrowRight} from "react-icons/hi";
 
-const LoginPage1 = ({ data, setData }) => {
+const LoginPage2 = ({ data, setData, propsData }) => {
+    const { setFName, setLName } = propsData
+
     return (
         <>
 
@@ -11,22 +14,27 @@ const LoginPage1 = ({ data, setData }) => {
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" placeholder="Write Your First Name" className="input  rounded-none border-b-4 border-indigo-500" />
+                        <input onBlur={(e) => setFName(e.target.value)} type="text" placeholder="Write Your First Name" className="input  rounded-none border-b-4 border-indigo-500" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" placeholder="Write Your Last Name" className="input  rounded-none border-b-4 border-indigo-500" />
+                        <input onBlur={(e) => setLName(e.target.value)} type="text" placeholder="Write Your Last Name" className="input  rounded-none border-b-4 border-indigo-500" />
                     </div>
+
                     <div className="form-control mt-6">
-                        <button onClick={() => setData(!data)} className="btn btn-primary capitalize">Next Step</button>
+                        <div className='flex justify-center '>
+                            <button onClick={() => setData(!data)} className=" btn btn-primary capitalize">Next Step <HiOutlineArrowRight/></button>
+                        </div>
                     </div>
                 </div>
+
+
             </div>
         </>
 
     )
 }
 
-export default LoginPage1
+export default LoginPage2
