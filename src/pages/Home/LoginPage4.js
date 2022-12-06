@@ -6,7 +6,7 @@ const LoginPage4 = ({ condition34, setCondition34, propsData }) => {
     return (
         <>
 
-            <div className="card flex-shrink-0 md:h-[85vh] w-full max-w-sm shadow-2xl bg-base-100 rounded-none">
+            <div className="card flex-shrink-0 md:h-[80vh] w-full max-w-sm shadow-2xl bg-base-100 rounded-none">
                 <div className="card-body justify-center">
 
                     <div className="form-control">

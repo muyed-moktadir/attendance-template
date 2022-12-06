@@ -2,22 +2,25 @@ import React, { useState } from 'react'
 import login from "../../assets/images/login.png"
 import LoginPage2 from './LoginPage2'
 import LoginPage3 from './LoginPage3'
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 const LoginPage1 = () => {
     const [data, setData] = useState(true)
-    const [fName,setFName]=useState('')
-    const [lName,setLName]=useState('')
-    const [phone,setPhone]=useState('')
-    const [email,setEmail]=useState('')
-    const [password,setPassword]=useState('')
-    const handleFrom=()=>{
-        if(password.length<=5){
-            alert('Password must be 6 character')
-            console.log(fName,lName,phone,email,password)
+    const [fName, setFName] = useState('')
+    const [lName, setLName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const handleFrom = () => {
+        if (password.length <= 8) {
+            toast('Password must be 8 characters')
+            console.log(fName, lName, phone, email, password)
         }
 
     }
-    const propsData={
-        setFName,setLName,setPhone,setEmail,setPassword,handleFrom
+    const propsData = {
+        setFName, setLName, setPhone, setEmail, setPassword, handleFrom
     }
     console.log(fName)
     return (
@@ -38,9 +41,10 @@ const LoginPage1 = () => {
                     }
 
                 </div>
+                {/* <ToastContainer className="absolute md:mt-11" /> */}
             </div>
         </>
     )
 }
 
-export default LoginPage1
+export default LoginPage1

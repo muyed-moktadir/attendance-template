@@ -9,7 +9,7 @@ const LoginPage3 = ({ data, setData, propsData }) => {
         <>
 
             {condition34 ?
-                <div className="card flex-shrink-0 md:h-[85vh] w-full max-w-sm shadow-2xl bg-base-100 rounded-none ">
+                <div className="card flex-shrink-0 md:h-[80vh] w-full max-w-sm shadow-2xl bg-base-100 rounded-none ">
                     <div className="card-body justify-center">
                         <div className="form-control">
                             <h1 className='text-center font-bold text-2xl '>SignUp Form</h1>
