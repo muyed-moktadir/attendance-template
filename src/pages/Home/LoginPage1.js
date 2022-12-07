@@ -3,8 +3,10 @@ import login from "../../assets/images/login.png"
 import LoginPage2 from './LoginPage2'
 import LoginPage3 from './LoginPage3'
 import { ToastContainer, toast } from 'react-toastify';
+import { useForm } from "react-hook-form";
 
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 const LoginPage1 = () => {
     const [data, setData] = useState(true)
     const [fName, setFName] = useState('')
@@ -12,15 +14,20 @@ const LoginPage1 = () => {
     const [phone, setPhone] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const navigate = useNavigate()
     const handleFrom = () => {
         if (password.length <= 8) {
             toast('Password must be 8 characters')
             console.log(fName, lName, phone, email, password)
+            
+        }
+        else{
+            navigate("/attendance")
         }
 
     }
     const propsData = {
-        setFName, setLName, setPhone, setEmail, setPassword, handleFrom
+        fName, lName, phone, email, password,setFName, setLName, setPhone, setEmail, setPassword, handleFrom
     }
     console.log(fName)
     return (

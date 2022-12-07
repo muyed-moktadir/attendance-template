@@ -18,7 +18,6 @@ function App() {
             <Route key={index} path={path} element={<Component />} />
           ))}
         </Routes>
-
       </Navbar>
       <ToastContainer />
     </div>
