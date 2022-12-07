@@ -6,50 +6,57 @@ const Attendance = () => {
     
       {
         "id": "638f6abfa4f96537733d752f",
-        "name": "Pat",
-        "status": "Hicks"
+        "date": "12/7/2022",
+        "status": "Present",
+        "employee_name": "Hicks"
+
       },
       {
         "id": "638f6abf539ce9264931460a",
-        "name": "Fannie",
-        "status": "Brooks"
+        "date": "12/7/2022",
+        "status": "Present",
+        "employee_name": "slamon"
       },
       {
         "id": "638f6abf01d00d9e9cefcefc",
-        "name": "Mandy",
-        "status": "Ramos"
+        "date": "12/7/2022",
+        "status": "Present",
+        "employee_name": "Hicks"
       },
       {
         "id": "638f6abfbe50d29eefa9c21c",
-        "name": "Milagros",
-        "status": "James"
+        "date": "12/7/2022",
+        "status": "Present",
+        "employee_name": "ronn"
       },
       {
         "id": "638f6abfe2570444955adf5e",
-        "name": "Lela",
-        "status": "Hooper"
+        "date": "12/7/2022",
+        "status": "Present",
+        "employee_name": "Hicks"
       }
     
   ]
 
   return (
-    <div className="overflow-x-auto mt-14">
-      <table className="table w-full">
+    <div className="overflow-x-auto w-[100%] border- mt-20"> 
+    <h1 className=' text-center text-5xl font-bold mb-10'>Attendance</h1>
+      <table className="table mx-auto w-[60%]  ">
         {/* <!-- head --> */}
-        <thead>
+        <thead >
           <tr>
+            <th>Date</th>
             <th>Name</th>
-            <th>Job</th>
-            <th>Favorite Color</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
           {/* <!-- row 1 --> */}
           {
-            data.map(d=>
+            data.map((d,index)=>
               <tr>
-              <td>{d.id}</td>
-              <td>{d.name}</td>
+              <td>{d.date}</td>
+              <td>{d.employee_name}</td>
               <td>{d.status}</td>
             </tr>
             )

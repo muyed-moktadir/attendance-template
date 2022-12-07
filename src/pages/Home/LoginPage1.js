@@ -32,12 +32,16 @@ const LoginPage1 = () => {
     console.log(fName)
     return (
         <>
-            <div className="hero h-auto bg-accent mt-10">
+            <div className="hero h-auto bg-accent mt-20">
 
                 <div className="hero-content justify-between w-screen flex-col lg:flex-row">
 
-                    <div className='relative'>
-                        <h1 className='absolute top-20 left-5'>muyed</h1>
+                    <div className='relative '>
+                        <div className='absolute top-13 left-5'>
+                        <h1 className='text-4xl font-bold mb-0'>Ultimate</h1>
+                        <span className='text-sm mt-0'>Human Resource Management</span>
+                        </div>
+                        
                         <img src={login} class="md:h-screen" alt="" />
                     </div>
                     {
